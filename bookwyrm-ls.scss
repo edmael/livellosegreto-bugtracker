@@ -1,0 +1,143 @@
+// Theme inherited from "bookwyrm-light.scss"
+
+/**
+ * The $primary color must be defined BEFORE the import of Bulma derived-variables.
+ * In this way, Bulma will automatically set all primary variants.
+ */
+$primary: hsl(50, 100%, 48%);
+
+// Define a color that is in contrast with the $primary
+$primary-contrast: hsl(209, 100%, 20%);
+
+/**
+ * The $link color must be defined BEFORE the import of Bulma derived-variables.
+ * In this way, Bulma will automatically create derived colors and set classes
+ * properties like "is-link" class or buttons.
+ */
+$link: $primary-contrast;
+
+@import "../vendor/bulma/sass/utilities/derived-variables.sass";
+
+/* Colors
+ ******************************************************************************/
+
+/* states */
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+/* book cover standins */
+$no-cover-color: $primary-contrast;
+
+/* background colors */
+$scheme-main: $white;
+$scheme-main-bis: $white-bis;
+$background-body: $white;
+$background-secondary: $white-ter;
+$background-tertiary: $white-bis;
+$scrollbar-track: $background-secondary;
+$scrollbar-thumb: $grey-lighter;
+
+/* highlight colors */
+$primary-highlight: $primary-light;
+$info-highlight: $info-light;
+$success-highlight: $success-light;
+
+/* borders */
+$border: $grey-lighter;
+$border-hover: $grey-light;
+$border-light: $grey-lightest;
+$border-light-hover: $grey-light;
+
+/* text */
+$text: $grey-dark;
+$text-light: $grey;
+$text-strong: $grey-darker;
+
+/* links */
+$link-background: $link;
+$link-hover: $grey-darker;
+$link-focus: $grey-darker;
+$link-active: $grey-darker;
+
+/* bulma overrides */
+$background: $background-secondary;
+$menu-item-active-background-color: $link-background;
+$menu-item-hover-background-color: $primary;
+// Custom radius sizes
+$radius-small: 0.25rem;
+$radius: 0.5rem;
+$radius-large: 1rem;
+// Normalize card radius starting from Bulma radius variables
+$card-radius: $radius;
+// Create a custom shadow
+$shadow: 0.2em 0.4em 0.5em 0.1em rgba($primary-contrast, 0.25), 0 0px 5px 2px rgba($primary-contrast, 0.15);
+
+/* Navbar */
+$navbar-background-color: $primary-contrast;
+$navbar-item-color: $text-invert;
+
+/* Footer */ 
+$footer-background-color: $scheme-main-ter;
+
+/* misc */
+$invisible-overlay-background-color: rgba($scheme-invert, 0.66);
+
+/* Fonts
+ ******************************************************************************/
+$family-primary: $family-sans-serif;
+$family-secondary: $family-sans-serif;
+
+.has-text-muted {
+    color: $grey-dark !important;
+}
+
+.has-text-more-muted {
+    color: $grey !important;
+}
+
+/**
+ *******************************************************************************
+ * BW classes customizations
+ *******************************************************************************
+ */
+ // Display avatar images rounded since all the interface has rounded elements.
+.avatar {
+    border-radius: $radius;
+}
+
+// Use $primary for accent color of inputs. For details, see:
+// https://developer.mozilla.org/en-US/docs/Web/CSS/accent-color
+body {
+    accent-color: $primary;
+}
+
+ // Fix rounded bell corner.
+.tags.has-addons .tag:not(:last-child) {
+    border-radius: $radius!important;
+}
+
+// Dettagli giusto per.
+.icon-heart {
+    color: red;
+}
+
+.icon-boost {
+    color: skyblue;
+}
+
+.icon-comment {
+    color: green;
+}
+
+.icon-warning {
+    color: orange;
+}
+
+/**
+ * Import SSS, this must be the last section of this file
+ */
+@import "../bookwyrm.scss";
+@import "../vendor/icons.css";
+@import "../vendor/shepherd.scss";
