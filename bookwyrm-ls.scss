@@ -118,7 +118,7 @@ body {
     border-radius: $radius!important;
 }
 
-// Dettagli giusto per.
+// Dettagli di colore nelle azioni sui post.
 .icon-heart {
     color: red;
 }
@@ -133,6 +133,15 @@ body {
 
 .icon-warning {
     color: orange;
+}
+
+// sistemazione spazio header
+#main_nav .navbar-start .mt-3 {
+margin-top: 0rem !important;
+}
+
+.tile .is-parent .is-clipped {
+    overflow: visible!important;
 }
 
 /**
