@@ -119,15 +119,15 @@ body {
 }
 
 // Dettagli di colore nelle azioni sui post.
-.icon-heart {
+.icon-heart, .icon-graphic-heart {
     color: red;
 }
 
-.icon-boost {
+.icon-boost, .icon-graphic-paperplane {
     color: skyblue;
 }
 
-.icon-comment {
+.icon-comment, .icon-graphic-banknote {
     color: green;
 }
 
@@ -142,6 +142,23 @@ margin-top: 0rem !important;
 
 .tile .is-parent .is-clipped {
     overflow: visible!important;
+}
+
+.has-background-success-highlight, .has-background-primary-highlight, .bw-tabs.is-toggle a:hover, .pagination-previous, .pagination-next, .pagination-link {
+    background-color: #f5cc00!important;
+    border: 0px!important;
+}
+
+.bw-tabs a {
+    padding: 0.8em!important;
+}
+
+.bw-tabs.is-toggle a:hover, .bw-tabs.is-toggle a {
+    border-color: white!important;
+}
+
+.navbar .logo {
+    max-height: 70px!important;
 }
 
 /**
